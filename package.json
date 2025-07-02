@@ -1,0 +1,9 @@
+{
+    "name": "rt-matrix",
+    "version": "0.0.1",
+	  "type": "module",
+    "dependencies": {
+        "is-any-array": "^2.0.1",
+        "ml-matrix": "^6.11.1"
+		}
+}
