@@ -595,9 +595,8 @@ export default class Matrix {
           dst.set(0, c, sum);
         }
       } else if (n > 1) { //[m x n] * [n x p] including [m x n] * [n x 1]
-        if (m <= 16) {
+        if (m <= 4 && n <= 4) {
           for (let r = 0; r < m; r++) {
-            for (let i = 0; i < n; i++) tmpRow[i] = this.get(r, i);
             for (let c = 0; c < p; c++) {
               let sum = 0;
               for (let i = 0; i < n; i++) sum += this.get(r, i) * other.get(i, c);
